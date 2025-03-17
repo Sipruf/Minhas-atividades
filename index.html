@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Minhas atividades</title>
+    <link rel="icone" href="image/icon.png" type="image/icon" />
+
+    <link rel="stylesheet" href="style.css">
+
+</head>
+
+<body onload="loadTasks()">
+    <div class="container">
+        <h2>Controle de atividades</h2>
+        <input type="text" id="taskName" placeholder="Atividade" maxlength="100">
+        <input type="text" id="taskDesc" placeholder="Descrição" maxlength="100">
+        <button onclick="addTask()">Adicionar atividade</button>
+        <button onclick="generateReport()">Gerar Relatório</button>
+        <div id="taskList" class="task-container"></div>
+    </div>
+
+</body>
+
+<script src="script.js"></script>
+
+</html>
+
+
+<!--salvar as informacoes no cache, para caso a pagina seja recarregada-->
+<!--pode ser que não esteja funcionando o save dos dados no localstorage (confirmar)-->
+<!--ajustar o mobile-->
+<!--ajustar a media query-->
+<!--adicionar um lembrete para iniciar a atividade-->
+<!--converter para pwa-->
