@@ -1,0 +1,74 @@
+body {
+    font-family: Arial, sans-serif;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin: 20px;
+    background-color: #051923;
+}
+.container {
+    width: 100%;
+    max-width: 500px;
+    background: #e8e8e4;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    text-align: center;
+}
+input, button {
+    width: calc(100% - 20px);
+    padding: 10px;
+    margin: 6px 0;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+}
+button {
+    background: #007bff;
+    color: white;
+    cursor: pointer;
+}
+button:hover {
+    background: #0056b3;
+}
+.task-container {
+    margin-top: 10px;
+}
+.task {
+    background: white;
+    padding: 15px;
+    margin: 10px 0;
+    border-radius: 5px;
+    box-shadow: 0 0 5px rgba(0, 0, 0, 0.1);
+    text-align: center;
+    word-wrap: break-word;
+    overflow-wrap: break-word;
+}
+.task h3 {
+    margin: 0;
+    font-size: 18px;
+}
+.task p {
+    margin: 5px 0;
+    color: #555;
+    max-width: 100%;
+    word-wrap: break-word;
+    overflow-wrap: break-word;
+    white-space: pre-wrap;
+}
+.task .time {
+    font-weight: bold;
+    margin-bottom: 10px;
+    display: block;
+}
+.task .buttons {
+    display: flex;
+    justify-content: space-between;
+    gap: 5px;
+}
+
+@media (max-width: 600px) {
+.container {
+max-width: 90%;
+padding: 15px;
+}
+}
