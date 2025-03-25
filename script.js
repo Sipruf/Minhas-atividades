@@ -12,6 +12,9 @@ function loadTasks() {
         tasks = JSON.parse(localStorage.getItem("tasks")) || [];
         tasksLoaded = true;
     }
+    if (tasks.length > 0) {
+        renderTasks();
+    }
     renderTasks();
 }
         function addTask() {
@@ -82,6 +85,7 @@ function loadTasks() {
                 activeTask = task;
                 task.timer = setInterval(() => {
                     task.time++;
+                    saveTasks();
                     document.getElementById(`time-${task.id}`).innerText = formatTime(task.time);
                 }, 1000);
             }
