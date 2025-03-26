@@ -104,6 +104,7 @@ function loadTasks() {
         
         function removeTask(id) {
             tasks = tasks.filter(t => t.id !== id);
+            saveTasks();
             renderTasks();
         }
         
