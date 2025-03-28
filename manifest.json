@@ -1,0 +1,30 @@
+{
+    "id": "/",
+    "name": "Gerenciador de Atividades",
+    "short_name": "Atividades",
+    "description": "Um aplicativo simples para gerenciar e cronometrar atividades.",
+    "start_url": "/",
+    "display": "standalone",
+    "background_color": "#ffffff",
+    "theme_color": "#007bff",
+    "icons": [
+      {
+        "src": "/icons/icon-192x192.png",
+        "type": "image/png",
+        "sizes": "192x192"
+      },
+      {
+        "src": "/icons/icon-512x512.png",
+        "type": "image/png",
+        "sizes": "512x512"
+      }
+    ],
+    "screenshots": [
+      {
+        "src": "/icons/screenshot.png",
+        "sizes": "1080x1920",
+        "type": "image/png"
+      }
+    ]
+  }
+  
