@@ -1,4 +1,3 @@
-
 let tasks = [];
 let tasksLoaded = false;
 let activeTask = null;
@@ -18,18 +17,27 @@ function loadTasks() {
     }
     renderTasks();
 }
+
+// Adicionar atividade
         function addTask() {
             const taskNameInput = document.getElementById("taskName");
             const taskDescInput = document.getElementById("taskDesc");
             const taskName = taskNameInput.value;
             const taskDesc = taskDescInput.value;
             
-            if (taskName.trim() === "" || taskDesc.trim() === ""){
-                alert("Por favor, preencha todos os campos antes de adicionar uma atividade.")
+            if (taskName.trim() === "" || taskDesc.trim() === "") {
+                alert("Por favor, preencha todos os campos antes de adicionar uma atividade.");
                 return;
             }
 
-            if (tasks.some(task => task.name === taskName)) {
+            // Números repetidos permitidos 
+            const numerosPermitidos = ["1","6","11", "16", "21", "25", "26", "27", "28"];
+            const numeroNoNome = taskName.match(/\d+$/)?.[0];
+
+            if (
+                tasks.some(task => task.name === taskName) &&
+                !(numeroNoNome && numerosPermitidos.includes(numeroNoNome))
+            ) {
                 alert("Já existe uma atividade com este código ou nome.");
                 return;
             }
@@ -198,12 +206,38 @@ function loadTasks() {
         function editTask(id) {
             const task = tasks.find(t => t.id === id);
             if (!task) return;
-            
+
             const newDesc = prompt("Editar descrição:", task.desc);
             if (newDesc !== null) {
                 task.desc = newDesc.substring(0, 100);
-                renderTasks();
             }
+
+            const newTime = prompt(
+                "Editar tempo (hh:mm:ss):",
+                formatTime(task.time)
+            );
+            if (newTime !== null) {
+                const parts = newTime.split(":");
+                if (parts.length === 3) {
+                    const hours = parseInt(parts[0], 10);
+                    const minutes = parseInt(parts[1], 10);
+                    const seconds = parseInt(parts[2], 10);
+                    if (
+                        !isNaN(hours) && hours >= 0 &&
+                        !isNaN(minutes) && minutes >= 0 && minutes < 60 &&
+                        !isNaN(seconds) && seconds >= 0 && seconds < 60
+                    ) {
+                        task.time = hours * 3600 + minutes * 60 + seconds;
+                    } else {
+                        alert("Tempo inválido. Use o formato hh:mm:ss.");
+                    }
+                } else {
+                    alert("Tempo inválido. Use o formato hh:mm:ss.");
+                }
+            }
+
+            renderTasks();
+            saveTasks();
         }
         
         // Remover a tarefa
@@ -239,22 +273,3 @@ function loadTasks() {
                 alert("Erro ao copiar relatório: " + err);
             });
         }
-<<<<<<< HEAD
-<<<<<<< HEAD
-    
-
-        if ("serviceWorker" in navigator) {
-            window.addEventListener("load", () => {
-              navigator.serviceWorker
-              navigator.serviceWorker.register('./Minhas-atividades/service-worker.js')
-                .then(() => console.log("Service Worker registrado com sucesso!"))
-                .catch(error => console.log("Erro ao registrar Service Worker:", error));
-            });
-          }
-          
-=======
-    
->>>>>>> parent of d27576a (implementação do pwa)
-=======
-    
->>>>>>> parent of d27576a (implementação do pwa)
