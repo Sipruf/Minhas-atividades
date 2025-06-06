@@ -239,6 +239,7 @@ function loadTasks() {
                 alert("Erro ao copiar relatório: " + err);
             });
         }
+<<<<<<< HEAD
     
 
         if ("serviceWorker" in navigator) {
@@ -250,3 +251,6 @@ function loadTasks() {
             });
           }
           
+=======
+    
+>>>>>>> parent of d27576a (implementação do pwa)
