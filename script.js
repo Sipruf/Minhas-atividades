@@ -240,6 +240,7 @@ function loadTasks() {
             });
         }
 <<<<<<< HEAD
+<<<<<<< HEAD
     
 
         if ("serviceWorker" in navigator) {
@@ -251,6 +252,9 @@ function loadTasks() {
             });
           }
           
+=======
+    
+>>>>>>> parent of d27576a (implementação do pwa)
 =======
     
 >>>>>>> parent of d27576a (implementação do pwa)
