@@ -222,18 +222,17 @@ function loadTasks() {
                     const hours = parseInt(parts[0], 10);
                     const minutes = parseInt(parts[1], 10);
                     const seconds = parseInt(parts[2], 10);
+                    // Validação: horas até 23, minutos e segundos até 59
                     if (
-                        !isNaN(hours) && hours >= 0 &&
+                        !isNaN(hours) && hours >= 0 && hours <= 23 &&
                         !isNaN(minutes) && minutes >= 0 && minutes < 60 &&
                         !isNaN(seconds) && seconds >= 0 && seconds < 60
                     ) {
                         task.time = hours * 3600 + minutes * 60 + seconds;
                     } else {
-                        alert("Tempo inválido. Use o formato hh:mm:ss.");
+                        alert("Tempo inválido. Use o formato hh:mm:ss");
                     }
-                } else {
-                    alert("Tempo inválido. Use o formato hh:mm:ss.");
-                }
+                } 
             }
 
             renderTasks();
