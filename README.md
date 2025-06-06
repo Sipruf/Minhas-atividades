@@ -7,16 +7,14 @@ Este é um gerenciador de atividades simples desenvolvido para ajudar no acompan
 ## Funcionalidades
 
 - Adicionar, editar e remover atividades
-- Marcar atividades como concluídas
-- Filtrar atividades por status (pendente, concluída)
+- Acompanhar o tempo utilizado para cada tarefa
 - Interface intuitiva e fácil de usar
 
 ## Tecnologias Utilizadas
 
-- [Linguagem/Framework utilizado, ex: JavaScript, React, Node.js]
-- [Outras dependências relevantes]
+- [Linguagem: JavaScript
 
-## Instalação
+## Como acessar:
 
 Acesse a aplicação diretamente pelo GitHub Pages:
 
@@ -25,7 +23,6 @@ https://sipruf.github.io/Minhas-atividades/
 ## Como Usar
 
 - Adicione uma nova atividade preenchendo o campo e clicando em "Adicionar"
-- Marque como concluída clicando no checkbox ao lado da atividade
 - Edite ou remova atividades usando os botões correspondentes
 
 ## Contribuição
