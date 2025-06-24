@@ -209,7 +209,7 @@ function loadTasks() {
 
             const newDesc = prompt("Editar descrição:", task.desc);
             if (newDesc !== null) {
-                task.desc = newDesc.substring(0, 100);
+                task.desc = newDesc.substring(0, 350);
             }
 
             const newTime = prompt(
